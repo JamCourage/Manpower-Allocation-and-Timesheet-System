@@ -2,7 +2,7 @@
 Written by JamCourage                    
 
 **主題類別**            
-Scheduling, Operation Research, Optimization Method, Project Management, Cost Management                      
+Scheduling, Operation Research, Optimization Method, Project Management, Cost Management, GUI                      
 
 **分析工具**      
 Python(numpy, pandas, datetime, random, tkinter, tkcalendar)
@@ -24,28 +24,27 @@ Python(numpy, pandas, datetime, random, tkinter, tkcalendar)
 	2. 執行績效差異分析、編製次期預算
 
 **兩大步驟**            
-1. [Part 1:蒐集台灣上市櫃公司的英文永續報告書--使用python爬蟲](1.%20Web%20Crawler)      
-	(1) 將有揭露英文永續報告書的公司股票代碼存入list中      
-	(2) 設定並初始化Chrome     
-	(3) 使用for迴圈，迭代每一公司，依序從公開資訊觀測站，下載其英文永續報告書      
+1. 建置專案之排程與報價系統      
+	(1) 訂定專案層級、模組層級、員工層級等限制式                 
+	(2) 考慮一段期間有多項專案的情況     
+	(3) 設計排程演算法               
+	(4) 將演算法程式化
 	【程式碼】            
-	程式碼可參考[web_crawler_for_ESGreports.py](1.%20Web%20Crawler/web_crawler_for_ESGreports.py)，以下載110年永續報告書為例       
+	程式碼可參考[scheduling_system.py](scheduling_system)        
+	【公司輸入表格】           
+	導入排程系統前，公司必須先填的資料包含專案資訊、模組資訊、人力資訊等，
+	表格可參考[01import_data.xlsx](01import_data.xlsx)
+	【輸出結果】       
+	(1) 計算各專案成本與報價結果-> [02financial_data.xlsx](02financial_data.xlsx)          
+	(2) 各階層人力排程結果(以level 1人力配置為例)-> [03schedulingL1_data.xlsx](03schedulingL1_data.xlsx)
    
-2. [Part 2:分別計算各永續報告書的語調分數(Tone)--使用FinBERT情緒分類模型 & FinBERT主題分類模型](2.%20FinBERT_calculate%20tone)        
-	(1) 整理公司股票代碼：將代碼都存在list中      
-	(2) 安裝FinBERT兩大模型、nltk tokenizer      
-	(3) 逐一擷取PDF文字(使用pdfplumber)       
-	(4) 文字前處理：使用regex套件，保留英文字母大小寫、正常標點符號，其他以空白取代           
-	(5) nltk斷句        
-	(6) FinBERT：同時檢查不得超過512張量，超過者斷成兩句       
-		-(6-1) FinBERT情緒分類模型：將文本分類為**中立** 、**正向** 、**負向**           
-		-(6-2) FinBERT主題分類模型：將文本分類為**環境(E)** 、**社會(S)** 、**治理(G)** 、 **非ESG**     	   
-	(7) 紀錄結果：使用pandas套件，將結果存成dataframe格式。                
+2. 建置工時表系統                    
+	(1) 設計客製化工時表      
+	(2) 設計提醒填寫工時表功能、進度提醒功能      
+	(3) 結合排程系統，執行差異分析       
+	(4) 次期預算編製與策略建議                           
    【程式碼】            
-   程式碼可參考：           
-   (a) 迭代各公司，計算各公司永續報告書語調分數 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JamCourage/Tone-of-Sustainability-Report/blob/main/2.%20FinBERT_calculate%20tone/crawler_finbert.ipynb)                             
-   (b) 記錄一家公司每一句的語調與分類  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JamCourage/Tone-of-Sustainability-Report/blob/main/2.%20FinBERT_calculate%20tone/crawler_finbert_for_one.ipynb)     
-                       
-   【輸出結果】              
-   107年至110年之各公司永續報告書語調分數(Tone)結果，可參考[Tone_breakdown.xlsx](2.%20FinBERT_calculate%20tone/Tone_breakdown.xlsx)                       
+   工時系統程式碼可參考[timesheet_system.py](timesheet_system.py)                               
+   【工時表範本】              
+   可參考[04timesheet_example.xlsx](04timesheet_example.xlsx)                     
    
