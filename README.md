@@ -2,18 +2,22 @@
 Written by JamCourage                    
 
 **主題類別**            
-Scheduling, Operation Research, Project Management                      
+Scheduling, Operation Research, Optimization Method, Project Management, Cost Management                      
 
 **分析工具**      
 Python(numpy, pandas, datetime, random, tkinter, tkcalendar)
 
 **專案背景**                
 與伊雲谷數位科技財務部門、技術部門合作的專案，該公司有一主要業務係協助客戶導入ERP系統，
-每一個客戶都視為一個獨立專案，我們必須為公司建置有關專案的報價、人力排程規劃與工時表系統。                 
+每一個客戶都視為一個獨立專案，我們必須為公司建置有關專案的**報價** 、**人力排程規劃** 與 **工時表系統** 。                 
 
 **主要目標**      
 此專案有以下兩大主軸，各主軸之目標詳見如下：            
-(一) 降低各專案      
+(一) 建置專案之排程與報價系統             
+	1. 在考慮各式限制式下，降低(最小化)各專案之人力成本，並產出最佳化報價        
+	2. 減少閒置產能，將產能做最佳分配
+(二) 建置工時表系統            
+      
 
 **兩大步驟**            
 1. [Part 1:蒐集台灣上市櫃公司的英文永續報告書--使用python爬蟲](1.%20Web%20Crawler)      
