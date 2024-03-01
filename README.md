@@ -28,9 +28,9 @@ Python(numpy, pandas, datetime, random, tkinter, tkcalendar)
 	(1) 訂定專案層級、模組層級、員工層級等限制式                 
 	(2) 考慮一段期間有多項專案的情況     
 	(3) 設計排程演算法               
-	(4) 將演算法程式化
+	(4) 將演算法程式化                   
 	【程式碼】            
-	程式碼可參考[scheduling_system.py](scheduling_system)        
+	程式碼可參考[scheduling_system.py](scheduling_system.py)        
 	【公司輸入表格】           
 	導入排程系統前，公司必須先填的資料包含專案資訊、模組資訊、人力資訊等，
 	表格可參考[01import_data.xlsx](01import_data.xlsx)
